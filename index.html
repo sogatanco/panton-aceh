@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp" ng-controller="main">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular-route.min.js"></script>
+    <script src="https://rawgit.com/chjj/marked/master/marked.min.js"></script>
+    <script src="https://rawgit.com/Hypercubed/angular-marked/master/dist/angular-marked.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ngInfiniteScroll/1.3.0/ng-infinite-scroll.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-filter/0.5.8/angular-filter.min.js"></script>
+    <script src="app/myApp.js"></script>
+    <script src="https://cdn.steemjs.com/lib/latest/steem.min.js"></script>
+    
+
+    <title>Panton Aceh</title>
+   
+</head>
+<body>
+<!--start Navbar-->
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>                        
+            </button>
+            <a class="navbar-brand" href="#myPage">PANTON</a>
+          </div>
+          <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="#sigup">SigUp</a></li>
+              <li><a href="#login">Login</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    <!--end Navbar-->
+
+    <div class="container cont">
+    	<div class="row">
+          <div class="col-lg-1 col-sm-1 col-xs-1"></div>
+        	<div class="col-lg-2 col-sm-2 hidden-xs">
+            <!--Left-Menu-->
+            <ul class="nav nav-pills nav-stacked">
+              <li><a href><span class="	glyphicon glyphicon-king"></span>  Pujangga</a></li>
+              <li><a href><span class="glyphicon glyphicon-cog"></span>  Want to Support ?</a></li>
+              <li><a href><span class="	 glyphicon glyphicon-phone-alt"></span>  Contact Us</a></li>
+              <li><a href><span class="		glyphicon glyphicon-alert"></span>  Descliminer</a></li>
+              <li><a href><span class="glyphicon glyphicon-list-alt	"></span>  Privasi Policy</a></li>
+              <li><a href><span class="	glyphicon glyphicon-question-sign"></span>  FAQ</a></li>
+            </ul>
+            <!--end left-menu-->
+          </div>
+            <div class="col-lg-8 col-sm-8 col-xs-10">
+            	<div ng-view></div>
+            </div>
+            <div class="col-lg-1 col-sm-1 col-xs-1"></div>
+        </div>
+    </div>
+
+
+	
+	
+</div>
+
+
+
+      
+</body>
+</html>

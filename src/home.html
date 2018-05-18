@@ -1,0 +1,105 @@
+
+
+<div class="row">
+  <div class="col-sm-8 col-xs-12">   
+    <div ng-if="post.length==0">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <div class="animated-background">
+                    <div class="background-masker header-top"></div>
+                    <div class="background-masker header-left"></div>
+                    <div class="background-masker header-right"></div>
+                    <div class="background-masker header-bottom"></div>
+                    <div class="background-masker subheader-left"></div>
+                    <div class="background-masker subheader-right"></div>
+                    <div class="background-masker subheader-bottom"></div>
+                    <div class="background-masker content-top"></div>
+                    <div class="background-masker content-second-line"></div>
+                    <div class="background-masker content-third-line"></div>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <div class="animated-background">
+                    <div class="background-masker header-top"></div>
+                    <div class="background-masker header-left"></div>
+                    <div class="background-masker header-right"></div>
+                    <div class="background-masker header-bottom"></div>
+                    <div class="background-masker subheader-left"></div>
+                    <div class="background-masker subheader-right"></div>
+                    <div class="background-masker subheader-bottom"></div>
+                    <div class="background-masker content-top"></div>
+                    <div class="background-masker content-second-line"></div>
+                    <div class="background-masker content-third-line"></div>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <div class="animated-background">
+                    <div class="background-masker header-top"></div>
+                    <div class="background-masker header-left"></div>
+                    <div class="background-masker header-right"></div>
+                    <div class="background-masker header-bottom"></div>
+                    <div class="background-masker subheader-left"></div>
+                    <div class="background-masker subheader-right"></div>
+                    <div class="background-masker subheader-bottom"></div>
+                    <div class="background-masker content-top"></div>
+                    <div class="background-masker content-second-line"></div>
+                    <div class="background-masker content-third-line"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div infinite-scroll="getMoreData()">
+        <div ng-repeat="x in post">
+        <div class="panel panel-default">
+                 <div class="panel-body">
+                   <div class="media">
+                     <div class="media-left">
+                          <img src="http://img.busy.org/@{{x.author}}" class="media-object img-thumbnail img-circle photo  img-responsive">                    
+                     </div>
+                     <div class="media-body">
+                       <h4 class="media-heading">{{x.author}}</h4>
+                       <p class="text-muted"><span class="glyphicon glyphicon-paperclip"></span>  {{x.category}}</p>
+                       <hr>
+                     </div>
+                   </div>
+                   <div class="text" marked="x.body | limitTo : 200"></div> <a class=".text-right link" href="#/{{x.author}}/{{x.permlink}}">ReadMore . . .</a>
+                 </div>
+               </div> 
+       </div>
+       </div>
+      
+  </div>
+  <div class="col-sm-4 hidden-xs kanan">
+      <div class="panel panel-default">
+          <div class="panel-body">
+              <h4 class="judul"><span class="glyphicon glyphicon-bullhorn"></span> Pengumuman Ed-13</h4>
+              <dl>
+                <dt class="text-muted">@awahidsteem</dt>
+                    <dd> - as first winner</dd>
+                <dt class="text-muted">@ahadipj</dt>
+                    <dd> - as second winner</dd>
+                <dt class="text-muted">@nandaibra</dt>
+                    <dd> - as third winner</dd>
+                </dl> 
+          </div>
+      </div>
+      <div class="panel panel-default">
+            <div class="panel-body">
+                <h4 class="judul"><span class="glyphicon glyphicon-bullhorn"></span> Tema</h4>
+                <div ng-controller="main" ng-if="post.length==0">
+                        <img class="img-responsive center-block" src="img/loading.svg">
+                </div>
+                <div ng-repeat="x in post | unique:'category'">
+                        <button type="button" class="btn">{{x.category}}</button>
+                </div>
+            </div>
+        </div>
+  </div>
+</div>
+
+
+

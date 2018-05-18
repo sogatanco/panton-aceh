@@ -1,0 +1,193 @@
+body{
+	background-color: #EDEDED;
+}
+/*start navbar CSS*/
+.navbar {
+    font-family: Montserrat, sans-serif;
+    margin-bottom: 0;
+    background-color: #020202;
+    border: 0;
+    font-size: 14px !important;
+    letter-spacing: 3px; 
+}
+
+.navbar-nav li a:hover {
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #FB041D;
+	padding-bottom: 5px;	
+}
+
+.navbar-nav li.active a {
+    color: #ffffff !important;
+   
+}
+.navbar-default .navbar-toggle {
+    border-color: transparent;
+}
+
+.navbar .navbar-brand {
+    color: #ffffff !important;
+}
+
+.navbar.navbar-default.navbar-fixed-top .container #myNavbar .nav.navbar-nav.navbar-right li a {
+	color: #ffffff !important;
+	font-weight: bolder;
+}
+/*Ending Navbar CSS*/
+.container.cont {
+	margin-top: 70px;
+}
+
+
+/*css menu*/
+.container.cont .row .col-lg-2.col-sm-2.hidden-xs ul{
+	position: fixed;
+	font-family: Montserrat, sans-serif;
+   font-size:15px;
+}
+
+.container.cont .row .col-lg-2.col-sm-2.hidden-xs ul li a:hover{
+	color:#300;
+}
+.container.cont .row .col-lg-2.col-sm-2.hidden-xs ul li a{
+	color: #C8C8C8;
+	padding-top: 20px;
+	font-weight: bold;
+}
+.container.cont .row .col-lg-2.col-sm-2.hidden-xs ul li a:hover{
+	border-bottom: 5px solid #FB041D;
+	background-color: #DFDFDF;
+	color: #666;
+}
+/*end css menu*/
+
+/*css animattion*/
+@keyframes placeHolderShimmer{
+    0%{
+        background-position: -468px 0
+    }
+    100%{
+        background-position: 468px 0
+    }
+}
+
+.animated-background {
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-name: placeHolderShimmer;
+    animation-timing-function: linear;
+    background: #f6f7f8;
+    background: linear-gradient(to right, #eeeeee 8%, #dddddd 18%, #eeeeee 33%);
+    background-size: 800px 104px;
+    height: 96px;
+    position: relative;
+}
+.background-masker {
+    background: #fff;
+    position: absolute;
+}
+.background-masker.header-top,
+.background-masker.header-bottom,
+.background-masker.subheader-bottom {
+    top: 0;
+    left: 40px;
+    right: 0;
+    height: 10px;
+}
+.background-masker.header-left,
+.background-masker.subheader-left,
+.background-masker.header-right,
+.background-masker.subheader-right {
+    top: 10px;
+    left: 40px;
+    height: 8px;
+    width: 10px;
+}
+.background-masker.header-bottom {
+    top: 18px;
+    height: 6px;
+}
+
+.background-masker.subheader-left,
+.background-masker.subheader-right {
+    top: 24px;
+    height: 6px;
+}
+.background-masker.header-right,
+.background-masker.subheader-right {
+    width: auto;
+    left: 300px;
+    right: 0;
+}
+.background-masker.subheader-right {
+    left: 230px;
+}
+.background-masker.subheader-bottom {
+    top: 30px;
+    height: 10px;
+}
+.background-masker.content-top,
+.background-masker.content-second-line,
+.background-masker.content-third-line,
+.background-masker.content-second-end,
+.background-masker.content-third-end,
+.background-masker.content-first-end {
+    top: 40px;
+    left: 0;
+    right: 0;
+    height: 6px;
+}
+.background-masker.content-top {
+    height:20px;
+}
+.background-masker.content-first-end,
+.background-masker.content-second-end,
+.background-masker.content-third-end{
+    width: auto;
+    left: 380px;
+    right: 0;
+    top: 60px;
+    height: 8px;
+}
+.background-masker.content-second-line  {
+    top: 68px;
+}
+.background-masker.content-second-end {
+    left: 420px;
+    top: 74px;
+}
+.background-masker.content-third-line {
+    top: 82px;
+}
+.background-masker.content-third-end {
+    left: 300px;
+    top: 88px;
+}
+/*end animation css*/
+
+/* show post css*/
+.panel-body{
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.text h1,h2,h3,h4{
+    font-size: 18px;
+}
+.photo{
+	background-color: #EDEDED;
+	width: 60px;
+	height: 60px;
+}
+.link{
+    color:red;
+} 
+.link:hover{
+    color:red;
+}
+.judul{
+    border-bottom:1px solid #DFDFDF;
+    padding-bottom:7px;
+}
+
+/*end show post css*/
