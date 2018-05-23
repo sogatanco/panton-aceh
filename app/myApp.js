@@ -1,4 +1,5 @@
 var app = angular.module("myApp", ["ngRoute","hc.marked","infinite-scroll", "angular.filter"]);
+
 app.config(function($routeProvider, $locationProvider) {
     $routeProvider
     .when("/", {
@@ -10,6 +11,7 @@ app.config(function($routeProvider, $locationProvider) {
       controller:"post"
     })
 });
+
 app.controller("main", function($scope) {  
   $scope.post=[]; 
     function compare(a,b) {
@@ -41,10 +43,8 @@ app.controller("main", function($scope) {
           })
           .catch(e => {
             console.error(e);
-          })
-          
-    })
-    
+          })        
+    })   
   });
 
   app.controller("post", function($scope, $location, $routeParams){
