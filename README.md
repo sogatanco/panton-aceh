@@ -1,10 +1,12 @@
 # panton-aceh
+![logo.png](https://cdn.steemitimages.com/DQmPJngrfC2VbBHy7qrisJYQhUftqcLWsS4m9hyxWkhEKno/logo.png)
+
 A website featuring panton (poem in aceh language). Pantun is the result of a contest hold by aceh steemians in steemit. They are : [@sogata](http://steemit.com/@sogata), [@harjuky](http://steemit.com/@harjuky), [@abudar](http://steemit.com/@abudar), [@iamfo](http://steemit.com/@iamfo), and [@rejacole](http://steemit.com/@rejacole). This contest hold in 3 days.
 
 To display all poem of the contest, I use steem-js by displaying all posts that vote by [@pantoen-aceh](http://steemit.com/@pantoen-aceh), this is an official steemit account for selecting the poem that feasible to display in http://pantonaceh.com/.
 
 ### Usage
-`https://github.com/team2dev/panton-aceh.git`
+`git clone https://github.com/team2dev/panton-aceh.git`
 
 ### Development
 This App create based steem-js API and using Angular js 1.5.0 Framework.
