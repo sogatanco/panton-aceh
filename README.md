@@ -19,7 +19,7 @@ This App create based steem-js API and using Angular js 1.5.0 Framework.
 - Creating Post-Detail Page `finished`
 - Creating Profil Page 
 - Displaying posts based category
-- Creating Pujangga, Want To support?, Contact Us, Desclaminer, Privasi Policy and FAQ page
+- Creating Pujangga, Want To support?, Contact Us, Desclaminer, Privasi Policy and FAQ page `in process`
 - Adding Steemconnect Login
 - Adding posting and voting function
 
