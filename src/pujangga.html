@@ -1,0 +1,21 @@
+<!-- Loading animation Before data Loaded-->
+<div ng-if="pujangga.length==0">
+    <center>
+        <img class="img-responsive center-block" src="img/loading.svg">
+    </center>
+</div>
+<!-- Displaying the data-->
+<div ng-repeat="x in pujangga | unique:'author' | orderBy:'author'">
+    <div class="col-lg-3 col-sm-4 col-xs-12">
+        <div class="panel panel-default">
+            <div class="panel-body text-center pujangga">
+                <a href="#/{{x.author}}"><img src="http://img.busy.org/@{{x.author}}" class="media-object img-thumbnail img-circle photo  img-responsive center-block">
+                <span class="pujangga-name">{{x.author }}</span></a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+

@@ -10,6 +10,10 @@ app.config(function($routeProvider, $locationProvider) {
       templateUrl:"src/post.html",
       controller:"post"
     })
+    .when("/pujangga",{
+      templateUrl:"src/pujangga.html",
+      controller:"pujangga"
+    })
 });
 
 app.controller("main", function($scope) {  
@@ -54,6 +58,37 @@ app.controller("main", function($scope) {
         $scope.$apply();
     });
   });
+
+  app.controller("pujangga", function($scope) {  
+    $scope.pujangga=[]; 
+      function compare(a,b) {
+          if (a.time < b.time)
+            return -1;
+          if (a.time > b.time)
+            return 1;
+          return 0;
+        } 
+      steem.api.getAccountVotes('pantoen-aceh', function (err, resp) {
+          if (err) console.log(err)
+          resp.sort(compare);
+          resp.reverse();
+          let promises = resp.map(r => {
+              const autper = r.authorperm.split('/', 2);
+              return steem.api.getContentAsync(autper[0], autper[1])
+                      .then((result) => {
+                          return result
+                      });
+          })
+          Promise.all(promises)
+            .then(results => {
+              $scope.pujangga=results;
+              $scope.$apply(); 
+            })
+            .catch(e => {
+              console.error(e);
+            })        
+      })   
+    }); 
   
 
 

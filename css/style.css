@@ -189,5 +189,17 @@ body{
     border-bottom:1px solid #DFDFDF;
     padding-bottom:7px;
 }
-
 /*end show post css*/
+
+/*start css pujangga*/
+.pujangga-name{
+    font-size: 17px;
+}
+.pujangga a{
+    color:rgb(46, 45, 45);
+}
+.pujangga a:hover{
+    color:red;
+    text-decoration: none;
+}
+/*end css pujangga*/
