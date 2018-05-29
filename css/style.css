@@ -1,6 +1,13 @@
 body{
 	background-color: #EDEDED;
 }
+a{
+    color: rgb(63, 61, 61);
+}
+a:hover{
+    color:#FB041D;
+    text-decoration: none;
+}
 /*start navbar CSS*/
 .navbar {
     font-family: Montserrat, sans-serif;
@@ -189,6 +196,9 @@ body{
     border-bottom:1px solid #DFDFDF;
     padding-bottom:7px;
 }
+.pils{
+    margin-top:10px;
+}
 /*end show post css*/
 
 /*start css pujangga*/
@@ -203,3 +213,4 @@ body{
     text-decoration: none;
 }
 /*end css pujangga*/
+

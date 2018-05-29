@@ -1,0 +1,66 @@
+<div class="panel panel-default">
+    <div class="panel-body">
+        <img src="http://img.busy.org/@{{author}}" class="media-object img-thumbnail img-circle photo  img-responsive center-block">
+        <h4 class="text-center">{{author}}</h4>
+        <p class="text-center">{{follow.follower_count}} follower | {{follow.following_count}} following | {{postoriginal.length}} pantoens</p>
+    </div>
+</div>
+<!-- dispyaling posts by some author -->
+<div class="row">
+    <div class="col-sm-8 col-xs-12">
+        <!--- animation when loading post-->
+        <div ng-if="posts.length==0">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <div class="animated-background">
+                            <div class="background-masker header-top"></div>
+                            <div class="background-masker header-left"></div>
+                            <div class="background-masker header-right"></div>
+                            <div class="background-masker header-bottom"></div>
+                            <div class="background-masker subheader-left"></div>
+                            <div class="background-masker subheader-right"></div>
+                            <div class="background-masker subheader-bottom"></div>
+                            <div class="background-masker content-top"></div>
+                            <div class="background-masker content-second-line"></div>
+                            <div class="background-masker content-third-line"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div infinite-scroll="getMoreData()">
+                    <div ng-repeat="x in posts">
+                    <div class="panel panel-default">
+                             <div class="panel-body">
+                               <div class="media">
+                                 <div class="media-left">
+                                      <img ng-src="http://img.busy.org/@{{x.author}}" class="media-object img-thumbnail img-circle photo  img-responsive">                    
+                                 </div>
+                                 <div class="media-body">
+                                   <h4 class="media-heading">{{x.author}}</h4>
+                                   <p class="text-muted"><span class="glyphicon glyphicon-paperclip"></span>  {{x.category}}</p>
+                                   <hr>
+                                 </div>
+                               </div>
+                               <div class="text" marked="x.body | limitTo : 200"></div> <a class=".text-right link" href="#/{{x.author}}/{{x.permlink}}">ReadMore . . .</a>
+                             </div>
+                           </div> 
+                   </div>
+                </div> 
+    </div>
+    <div class="col-sm-4 hidden-xs" ng-controller="pujangga">
+            <div class="panel panel-default">
+                    <div class="panel-body">
+                        <h4 class="judul"><span class="glyphicon glyphicon-bullhorn"></span> Ohters Pujangga</h4>
+                        <div ng-controller="main" ng-if="pujangga.length==0">
+                                <img class="img-responsive center-block" ng-src="img/loading.svg">
+                        </div>
+                        <div ng-repeat="x in pujangga1 | unique:'author' | orderBy:'author'">
+                                <a ng-href="#/{{x.author}}"><button  type="button" class="btn pils">{{x.author}}</button></a>
+                        </div>
+                        <div ng-if="pujangga1.length<5">
+                                <a class="btn" ng-click="getMoreData()">loadMore</a>
+                        </div>
+                    </div>
+                </div>
+    </div>
+</div>

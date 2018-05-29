@@ -56,10 +56,10 @@
                  <div class="panel-body">
                    <div class="media">
                      <div class="media-left">
-                          <img src="http://img.busy.org/@{{x.author}}" class="media-object img-thumbnail img-circle photo  img-responsive">                    
+                            <a href="#/{{x.author}}"><img ng-src="http://img.busy.org/@{{x.author}}" class="media-object img-thumbnail img-circle photo  img-responsive"></a>                    
                      </div>
                      <div class="media-body">
-                       <h4 class="media-heading">{{x.author}}</h4>
+                            <a href="#/{{x.author}}"><h4 class="media-heading">{{x.author}}</h4></a>
                        <p class="text-muted"><span class="glyphicon glyphicon-paperclip"></span>  {{x.category}}</p>
                        <hr>
                      </div>
@@ -68,8 +68,7 @@
                  </div>
                </div> 
        </div>
-       </div>
-      
+    </div> 
   </div>
   <div class="col-sm-4 hidden-xs kanan">
       <div class="panel panel-default">
@@ -89,10 +88,10 @@
             <div class="panel-body">
                 <h4 class="judul"><span class="glyphicon glyphicon-bullhorn"></span> Tema</h4>
                 <div ng-controller="main" ng-if="post.length==0">
-                        <img class="img-responsive center-block" src="img/loading.svg">
+                        <img class="img-responsive center-block" ng-src="img/loading.svg">
                 </div>
-                <div ng-repeat="x in post | unique:'category'">
-                        <button type="button" class="btn">{{x.category}}</button>
+                <div ng-repeat="x in tema | unique:'category'">
+                        <button type="button" class="btn pils">{{x.category}}</button>
                 </div>
             </div>
         </div>

@@ -1,17 +1,17 @@
 <div class="row">
     <div class="col-sm-8">
         <div ng-controller="post" ng-if="post.length==0">
-        <img class="img-responsive center-block" src="img/loading.svg">
+        <img class="img-responsive center-block" ng-src="img/loading.svg">
         </div>
         <div  ng-controller="post" ng-if="post.length!=0">
                 <div class="panel panel-default">
                         <div class="panel-body">
                           <div class="media">
                             <div class="media-left">
-                                 <img src="http://img.busy.org/@{{author}}" class="media-object img-thumbnail img-circle photo  img-responsive">                    
+                                <a href="#/{{x.author}}"><img ng-src="http://img.busy.org/@{{author}}" class="media-object img-thumbnail img-circle photo  img-responsive"></a>                    
                             </div>
                             <div class="media-body">
-                              <h4 class="media-heading">{{author}}</h4>
+                                <a href="#/{{x.author}}"><h4 class="media-heading">{{author}}</h4></a>
                               <p class="text-muted"><span class="glyphicon glyphicon-paperclip"></span>  {{post.category}}</p>
                               <hr>
                             </div>
